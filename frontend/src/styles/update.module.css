@@ -1,0 +1,150 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(37, 31, 31);
+  font-size: 40px;
+  padding: 10px;
+  background-color: rgb(56, 56, 231);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #747ed8;
+}
+
+.form {
+  justify-content: center;
+  background-color: wheat;
+  padding: 20px;
+  padding-right: 55px;
+  padding-left: 0px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  align-items: center;
+}
+
+.text {
+  margin-left: 50px;
+}
+
+.label {
+  margin-left: 40px;
+}
+
+.input {
+  margin: 5px;
+  margin-left: 20px;
+}
+
+.button {
+  margin-left: 22px;
+  width: 100%;
+}
+
+@media screen and (max-width: 780px) {
+  .container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .header {
+    padding-bottom: 50px;
+    padding-top: 40px;
+    font-size: 40px;
+  }
+
+  .form {
+    margin: 0px;
+    margin-top: 80px;
+    padding-right: 0px;
+    padding-left: 20px;
+    border-radius: 8px;
+    width: 400px;
+  }
+
+  .input {
+    margin: 5px;
+    margin-left: 55px;
+    width: 250px;
+  }
+
+  .text {
+    width: 300px;
+    height: 150px;
+    margin-left: 30px;
+  }
+
+  .button {
+    width: 70%;
+    margin-left: 50px;
+  }
+}
+
+@media screen and (max-width: 455px) {
+
+  .input {
+    margin-right: 30px;
+    width: 190px;
+    margin-left: 50px;
+  }
+
+  .text {
+    margin-left: 30px;
+    width: 230px;
+  }
+
+  .button {
+    width: 60%;
+    margin-left: 50px;
+  }
+
+}
+
+@media screen and (max-width: 390px) {
+
+  .input {
+    margin-right: 30px;
+    width: 190px;
+    margin-left: 25px;
+  }
+
+  .text {
+    margin-left: 8px;
+    width: 230px;
+  }
+
+  .button {
+    width: 60%;
+    margin-left: 45px;
+  }
+
+}
+
+@media screen and (max-width: 375px) {
+
+  .input {
+    margin-right: 30px;
+    width: 190px;
+    margin-left: 25px;
+  }
+
+  .text {
+    margin-left: 1px;
+    width: 230px;
+  }
+
+  .button {
+    width: 60%;
+    margin-left: 45px;
+  }
+
+}

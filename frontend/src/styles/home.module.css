@@ -1,0 +1,204 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: peachpuff;
+  font-size: 50px;
+  margin-top: 80px;
+  margin-bottom: 90px;
+}
+
+.container {
+  background-image: linear-gradient(to right, #8e64b6,#702ab1,#2f3ca8, #1324bd);
+  padding: 20px;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+.searchContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 5px;
+}
+
+.roundedImage {
+  width: 200px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%; /* Create a circular shape */
+  overflow: hidden; /* Ensure the image stays within the rounded border */
+  margin-bottom: 5%;
+  margin-top: 3%;
+}
+
+/* home.module.css */
+
+.uploadButton {
+  padding: 8px 16px; /* Adjust the padding as needed */
+  background-color: #4caf50; /* Set the background color */
+  color: white; /* Set the text color */
+  border: none;
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+
+  /* Additional styles can be added based on your preference */
+}
+
+.uploadButton:hover {
+  background-color: #45a049; /* Darker color on hover */
+}
+
+
+.searchInput {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.tableContainer {
+  background-color: #a79494;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-size: 20px;
+}
+
+table {
+  width: 100%;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+}
+
+thead {
+  background-color: #7e6f6f;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #a79494;
+}
+
+tbody tr:hover {
+  background-color: #c2acac;
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.actionButtons button {
+  padding: 6px 12px;
+  margin-left: 8px;
+  border-radius: 4px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+#delete {
+  background-color: red;
+}
+
+#delete:hover {
+  background-color: rgb(204, 3, 3);
+}
+
+#view {
+  background-color: #bebc1b;
+}
+
+#view:hover {
+  background-color: #9b980e;
+}
+
+.actionButtons button:hover {
+  background-color: #0056b3;
+}
+
+.addButton {
+  border-radius: 5px;
+  width: 200px;
+  height: 50px;
+  margin-top: 20px;
+  background-color: rgb(36, 199, 36);
+}
+
+.addButton:hover {
+  transition: 0.4s;
+  background-color: green
+}
+
+.pdfButton {
+  margin-top: -40px;
+  background-color: #e96122;
+  width: 200px;
+  height: 50px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+
+}
+
+.pdfButton:hover {
+  transition: 0.4s;
+  background-color: #b9420b;
+}
+
+@media screen and (max-width: 650px) {
+  .tableContainer {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .tableContainer {
+    font-size: 18px;
+  }
+
+  .actionButtons button {
+    padding-right: 6px;
+    padding-left: 6px;
+    font-size: 12px;
+  }
+
+  .pdfButton {
+    margin-top: 10px;
+    width: 140px;
+    height: 50px;
+  }
+
+  .addButton {
+    width: 150px;
+    height: 40px;
+    margin-top: 20px;
+    background-color: rgb(36, 199, 36);
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .tableContainer {
+    font-size: 17px;
+  }
+
+  .actionButtons button {
+    padding-right: 6px;
+    padding-left: 6px;
+  }
+
+  .searchContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    width: 280px;
+  }
+
+  .pdfButton {
+    margin-top: 10px;
+    width: 110px;
+    height: 40px;
+  }
+}

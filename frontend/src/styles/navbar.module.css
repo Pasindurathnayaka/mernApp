@@ -1,0 +1,428 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 75px;
+    background-color: rgb(55 65 81);
+    color: white;
+    padding: 0 30px 0 40px;
+}
+
+.logo {
+    width: 50px;
+}
+
+.navLinks {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    width: 75%;
+}
+
+.home,
+.about,
+.services,
+.contact,
+.signup,
+.login,
+.logout {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px 15px;
+    margin: 0 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Common styles for the underline */
+.home::after,
+.about::after,
+.services::after,
+.contact::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 8px;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.4s ease;
+}
+
+/* Hover effect to create the underline from left to right */
+.home:hover::after,
+.about:hover::after,
+.services:hover::after,
+.contact:hover::after {
+    width: 82%;
+}
+
+.signup,
+.login {
+    border: 1px solid yellow;
+    border-radius: 5px;
+    /* padding: 10px 15px; */
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.3s ease;
+}
+
+.logout {
+    border: 1px solid yellow;
+    border-radius: 5px;
+    padding: 10px 15px;
+    background-color: yellow;
+    color: rgb(55 65 81);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.signup:hover,
+.login:hover {
+    background-color: yellow;
+    color: rgb(55 65 81);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.logout:hover {
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.3s ease;
+}
+
+.mobileMenuIcon {
+    width: 20px;
+    display: none;
+}
+
+@media screen and (max-width: 1160px) {
+
+    .signup {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 120px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .home,
+    .about,
+    .services,
+    .contact,
+    .signup,
+    .login,
+    .logout {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        padding: 10px 10px;
+        margin: 0 10px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .signup,
+    .login {
+        border: 1px solid yellow;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 5px;
+        padding: 5px 8px;
+        font-size: 17px;
+        width: 85px;
+        background-color: transparent;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.3s ease;
+    }
+
+    .logout {
+        border: 1px solid yellow;
+        border-radius: 5px;
+        padding: 8px 10px;
+        background-color: yellow;
+        color: rgb(55 65 81);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .signup:hover,
+    .login:hover {
+        background-color: yellow;
+        color: rgb(55 65 81);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .logout:hover {
+        background-color: transparent;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.3s ease;
+    }
+
+
+}
+
+@media screen and (max-width: 800px) {
+
+    .home,
+    .about,
+    .services,
+    .contact,
+    .signup,
+    .login,
+    .logout {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        padding: 10px 10px;
+        margin: 0 10px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .signup,
+    .login {
+        border: 1px solid yellow;
+        border-radius: 5px;
+        padding: 8px 10px;
+        align-items: center;
+        border-radius: 5px;
+        padding: 5px 8px;
+        font-size: 15px;
+        width: 75px;
+        background-color: transparent;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.3s ease;
+    }
+
+    .logout {
+        border: 1px solid yellow;
+        border-radius: 5px;
+        padding: 8px 10px;
+        background-color: yellow;
+        color: rgb(55 65 81);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .signup:hover,
+    .login:hover {
+        background-color: yellow;
+        color: rgb(55 65 81);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .logout:hover {
+        background-color: transparent;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.3s ease;
+    }
+
+}
+
+@media screen and (max-width: 784px) {
+    .logo {
+        display: flex;
+        position: absolute;
+        top: 15px;
+        left: 35px;
+        width: 50px;
+    }
+
+    .navLinks {
+        display: none;
+    }
+
+    .navmobile {
+        position: absolute;
+        width: 100%;
+        display: block;
+        list-style: none;
+        background-color: rgb(31 41 55);
+        left: 0;
+        top: 75px;
+        transition: all 0.5s ease-out;
+    }
+
+    .home,
+    .about,
+    .services,
+    .contact,
+    .signup,
+    .login,
+    .logout {
+        color: white;
+        font-size: 18px;
+        text-align: center;
+        width: 100%;
+        transition: all 0.5s ease;
+    }
+
+    .home::after,
+    .about::after,
+    .services::after,
+    .contact::after {
+        display: none;
+    }
+
+    .signup,
+    .login,
+    .logout {
+        width: 25%;
+        font-size: 13px;
+    }
+
+    .signup {
+        margin-left: 50%;
+
+    }
+
+    .login {
+        margin-right: 10%;
+    }
+
+    .mobileMenuIcon {
+        width: 20px;
+        display: block;
+        position: absolute;
+        font-size: 30px;
+        color: white;
+        background-color: rgb(55 65 81);
+        border: none;
+        outline: none;
+        top: 15px;
+        right: 25px;
+    }
+}
+
+@media screen and (max-width: 784px) {
+
+    .signup,
+    .login,
+    .logout {
+        width: 25%;
+        font-size: 15px;
+        transition: background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease;
+    }
+
+    .signup:hover,
+    .login:hover,
+    .logout:hover {
+        background-color: transparent;
+        color: white;
+        transition: background-color 0s ease, color 0s ease, box-shadow 0s ease;
+    }
+
+    .signup {
+        margin-left: 30%;
+        background-color: yellow;
+        color: rgb(55 65 81);
+    }
+
+    .login {
+        margin-right: 10%;
+        background-color: yellow;
+        color: rgb(55 65 81);
+    }
+
+    .logout {
+        color: rgb(55 65 81);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        font-size: 17px;
+        width: 140px;
+        margin-left: 40%;
+    }
+
+}
+
+@media screen and (max-width: 430px) {
+
+    .signup,
+    .login,
+    .logout {
+        width: 25%;
+        font-size: 15px;
+        width: 80px;
+        transition: background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease;
+    }
+
+    .signup:hover,
+    .login:hover,
+    .logout:hover {
+        background-color: transparent;
+        color: white;
+        transition: background-color 0s ease, color 0s ease, box-shadow 0s ease;
+    }
+
+    .signup {
+        margin-left: 30%;
+        background-color: yellow;
+        color: rgb(55 65 81);
+    }
+
+    .login {
+        margin-right: 10%;
+        background-color: yellow;
+        color: rgb(55 65 81);
+    }
+
+    .logout {
+        color: rgb(55 65 81);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        font-size: 17px;
+        width: 120px;
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+
+    .signup,
+    .login,
+    .logout {
+        width: 20%;
+        font-size: 14px;
+        width: 80px;
+    }
+
+    .signup:hover,
+    .login:hover,
+    .logout:hover {
+        background-color: transparent;
+        color: white;
+        transition: background-color 0s ease, color 0s ease, box-shadow 0s ease;
+    }
+
+    .signup {
+        margin-left: 33%;
+        background-color: yellow;
+        color: rgb(55 65 81);
+    }
+
+    .login {
+        margin-right: 9%;
+        background-color: yellow;
+        color: rgb(55 65 81);
+    }
+
+    .logout {
+        color: rgb(55 65 81);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        font-size: 15px;
+        width: 100px;
+        margin-right: 6%;
+    }
+
+}
