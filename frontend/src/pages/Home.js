@@ -18,7 +18,7 @@ const Home = () => {
 
   let Image3;
   useEffect(() => {
-    axios.get(`http://localhost:5000/getImage`)
+    axios.get(`https://mernapp-e3ri.onrender.com/getImage`)
       .then(res => {
         // debugger
         setImage(res.data);
@@ -40,7 +40,7 @@ const Home = () => {
     async function getBlogs() {
       try {
 
-        const res = await fetch("http://localhost:5000/api/v1/blogs");
+        const res = await fetch("https://mernapp-e3ri.onrender.com/api/v1/blogs");
 
         const data = await res.json();
 
@@ -65,7 +65,7 @@ const Home = () => {
       // const isLoggedIn = localStorage.getItem('token');
 
       const response = await fetch(
-        `http://localhost:5000/api/v1/blogs/${id}`,
+        `https://mernapp-e3ri.onrender.com/api/v1/blogs/${id}`,
         {
           method: "DELETE",
         }

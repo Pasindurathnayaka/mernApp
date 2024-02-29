@@ -36,7 +36,7 @@ const Signup = () => {
     try {
 
       // Send user sign-up data to the backend API
-      const response = await axios.post('http://localhost:5000/api/v1/users/signup', formData);
+      const response = await axios.post('https://mernapp-e3ri.onrender.com/api/v1/users/signup', formData);
 
       // Handle success
       console.log(response.data); // You can do something here, e.g., show a success message or redirect to login page

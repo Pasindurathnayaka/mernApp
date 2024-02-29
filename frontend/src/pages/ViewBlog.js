@@ -16,7 +16,7 @@ const ViewBlog = () => {
             
 
             try {
-                const res = await fetch(`http://localhost:5000/api/v1/blogs/${id}`, {
+                const res = await fetch(`https://mernapp-e3ri.onrender.com/api/v1/blogs/${id}`, {
                     
                 });
 

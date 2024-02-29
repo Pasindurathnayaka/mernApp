@@ -30,7 +30,7 @@ const AddBlog = () => {
   const handleUpload = (e) => {
     const formdata = new FormData();
     formdata.append('file', file);
-    axios.post('http://localhost:5000/upload', formdata)
+    axios.post('https://mernapp-e3ri.onrender.com/upload', formdata)
       .then(res => {
         console.log(res);
       })
@@ -61,7 +61,7 @@ const AddBlog = () => {
 
     try {
 
-      const response = await fetch('http://localhost:5000/api/v1/blogs', {
+      const response = await fetch('https://mernapp-e3ri.onrender.com/api/v1/blogs', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

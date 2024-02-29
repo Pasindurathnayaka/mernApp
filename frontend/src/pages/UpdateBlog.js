@@ -32,7 +32,7 @@ const UpdateBlog = () => {
         async function getBlog() {
 
             try {
-                const res = await fetch(`http://localhost:5000/api/v1/blogs/${id}`, {
+                const res = await fetch(`https://mernapp-e3ri.onrender.com/api/v1/blogs/${id}`, {
 
                 });
                 const data = await res.json();
@@ -84,7 +84,7 @@ const UpdateBlog = () => {
         };
     
         try {
-            const response = await fetch(`http://localhost:5000/api/v1/blogs/${id}`, {
+            const response = await fetch(`https://mernapp-e3ri.onrender.com/api/v1/blogs/${id}`, {
                 method: "PUT",
                 body: JSON.stringify(formData),
                 headers: {
