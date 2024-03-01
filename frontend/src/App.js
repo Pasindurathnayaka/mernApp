@@ -23,9 +23,9 @@ function App() {
           <Route path="/login" element={<Login />} />
 
           {/* Use the PrivateRoute for the protected routes */}
-          <Route path="/addBlog" element={<PrivateRoute element={<AddBlog />} />} />
-          <Route path="/viewBlog/:id" element={<PrivateRoute element={<ViewBlog />} />} />
-          <Route path="/updateBlog/:id" element={<PrivateRoute element={<UpdateBlog />} />} />
+          <Route path="/addBlog"  element={<AddBlog />} />
+          <Route path="/viewBlog/:id"  element={<ViewBlog />} />
+          <Route path="/updateBlog/:id"  element={<UpdateBlog />} />
 
         </Routes>
       </BrowserRouter>
