@@ -21,16 +21,15 @@ const AddBlog = () => {
   const [grade, setGrade] = useState("");
   const [studentCount, setStudentCount] = useState("");
   const [contactNumber, setContactNumber] = useState("");
-  const [successMessage, setSuccessMessage] = useState('');
-
   const [designcode, setDesigncode] = useState("");
-  const [nitting, setNitting] = useState('');
+  const [nitting, setNitting] = useState("");
+  const [successMessage, setSuccessMessage] = useState('');
   const [file, setFile] = useState(null);
 
   const handleUpload = (e) => {
     const formdata = new FormData();
     formdata.append('file', file);
-    axios.post('https://mernapp-e3ri.onrender.com/upload', formdata)
+    axios.post('http://localhost:5000/upload', formdata)
       .then(res => {
         console.log(res);
       })
@@ -55,13 +54,13 @@ const AddBlog = () => {
       studentCount: studentCount,
       price: price,
       contactNumber: contactNumber,
-      designcode:designcode,
+      designcode: designcode,
       nitting: nitting
     };
 
     try {
 
-      const response = await fetch('https://mernapp-e3ri.onrender.com/api/v1/blogs', {
+      const response = await fetch('http://localhost:5000/api/v1/blogs', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -83,9 +82,6 @@ const AddBlog = () => {
         setStudentCount("");
         setPrice("");
         setContactNumber("");
-        setPrice("");
-        setDesigncode("");
-        setNitting("");
         setFootSize("");
 
         // Redirect to home page after 1.5 seconds
@@ -118,66 +114,56 @@ const AddBlog = () => {
             </div>
           )}
 
-          
+
 
           <span className="p-float-label">
             <InputText id="schoolCode" className={styles.input} value={schoolCode} onChange={(e) => setSchoolCode(e.target.value)} required />
-            <label htmlFor="schoolCode" className={styles.input}>Enter School Code:</label>
+            <label htmlFor="schoolCode" className={styles.input}>Enter schoolCode:</label>
           </span>
 
           <br />
 
           <span className="p-float-label">
             <InputText id="schoolName" className={styles.input} value={schoolName} onChange={(e) => setSchoolName(e.target.value)} required />
-            <label htmlFor="schoolName" className={styles.input}>Enter School Name:</label>
+            <label htmlFor="schoolName" className={styles.input}>Enter schoolName:</label>
           </span>
 
           <br />
 
           <span className="p-float-label">
-            <InputTextarea id="address" className={styles.text} value={address} onChange={(e) => setAddress(e.target.value)} rows={1} cols={40} required />
+            <InputTextarea id="address" className={styles.text} value={address} onChange={(e) => setAddress(e.target.value)} rows={5} cols={30} required />
             <label htmlFor="address" className={styles.input}>Enter address:</label>
           </span>
 
           <br />
-     
 
-          
+          <span className="p-float-label">
+            <InputText id="footSize" className={styles.input} value={footSize} onChange={(e) => setFootSize(e.target.value)} required />
+            <label htmlFor="footSize" className={styles.input}>Foot Size:</label>
+          </span>
 
-        
+          <br />
 
+          <span className="p-float-label">
+            <InputText id="length" className={styles.input} value={length} onChange={(e) => setLength(e.target.value)} required />
+            <label htmlFor="length" className={styles.input}>Enter length:</label>
+          </span>
 
+          <br />
 
+          <span className="p-float-label">
+            <InputText id="price" className={styles.input} value={price} onChange={(e) => setPrice(e.target.value)}  required />
+            <label htmlFor="price" className={styles.input}>Price:</label>
+          </span>
 
-          
-
-<span className="p-float-label">
-  <InputTextarea id="footSize" className={styles.text} value={footSize} onChange={(e) => setFootSize(e.target.value)} rows={1} cols={40} required />
-  <label htmlFor="footSize" className={styles.input}>Enter Foot Size:</label>
-</span>
-
-<br />
-
-<span className="p-float-label">
-  <InputTextarea id="price" className={styles.text} value={price} onChange={(e) => setPrice(e.target.value)} rows={1} cols={40} required />
-  <label htmlFor="price" className={styles.input}>Price:</label>
-</span>
-
-<br />
-
-<span className="p-float-label">
-  <InputText id="length" className={styles.input} value={length} onChange={(e) => setLength(e.target.value)} required />
-  <label htmlFor="length" className={styles.input}>Enter length:</label>
-</span>
-
-<br />
+          <br />
 
           <span className="p-float-label">
             <InputText id="machineType" className={styles.input} value={machineType} onChange={(e) => setMachineType(e.target.value)} required />
-            <label htmlFor="machineType" className={styles.input}>Enter Machine Type:</label>
+            <label htmlFor="machineType" className={styles.input}>Enter machineType:</label>
           </span>
 
-         <br></br>
+          <br />
 
           <span className="p-float-label">
             <InputText id="grade" className={styles.input} value={grade} onChange={(e) => setGrade(e.target.value)} required />
@@ -188,33 +174,28 @@ const AddBlog = () => {
 
           <span className="p-float-label">
             <InputText id="studentCount" className={styles.input} value={studentCount} onChange={(e) => setStudentCount(e.target.value)} required />
-            <label htmlFor="studentCount" className={styles.input}>Enter Student Count:</label>
+            <label htmlFor="studentCount" className={styles.input}>Enter studentCount:</label>
           </span>
 
           <br />
 
           <span className="p-float-label">
-  <InputTextarea id="designcode" className={styles.text} value={designcode} onChange={(e) => setDesigncode(e.target.value)} rows={1} cols={40} required />
-  <label htmlFor="designcode" className={styles.input}>Design Code:</label>
-</span>
+            <InputText id="contactNumber" className={styles.input} value={contactNumber} onChange={(e) => setContactNumber(e.target.value)} required />
+            <label htmlFor="contactNumber" className={styles.input}>Enter contactNumber:</label>
+          </span>
 
-<br />
-
-<span className="p-float-label">
-  <InputTextarea id="nitting" className={styles.text} value={nitting} onChange={(e) => setNitting(e.target.value)} rows={1} cols={40} required />
-  <label htmlFor="nitting" className={styles.input}>Nitting:</label>
-</span>
-
-<br />
-
-
-
-
-
+          <br />
 
           <span className="p-float-label">
-            <InputText id="contactNumber" className={styles.input} value={contactNumber} onChange={(e) => setContactNumber(e.target.value)} required />
-            <label htmlFor="contactNumber" className={styles.input}>Enter Contact Number:</label>
+            <InputTextarea id="designcode" className={styles.text} value={designcode} onChange={(e) => setDesigncode(e.target.value)} rows={1} cols={40} required />
+            <label htmlFor="designcode" className={styles.input}>Design Code:</label>
+          </span>
+
+          <br />
+
+          <span className="p-float-label">
+            <InputTextarea id="nitting" className={styles.text} value={nitting} onChange={(e) => setNitting(e.target.value)} rows={1} cols={40} required />
+            <label htmlFor="nitting" className={styles.input}>Nitting:</label>
           </span>
 
           <br />
